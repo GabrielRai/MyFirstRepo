@@ -1,18 +1,32 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq.Expressions;
 
 Console.WriteLine("Skriv in en önskad uträkning. (T.ex 1 + 1)");
 string userInput = Console.ReadLine();
-
-char[] userChar = userInput.ToCharArray();
-
-
-
-
-
-
-
-
-
+string[] userWords = userInput.Split(' ');
+int u1 = Convert.ToInt32(userWords[0]);
+int u2 = Convert.ToInt32(userWords[2]);
+int sum;
+ 
+        switch (userWords[1])
+        {
+        case "+":
+                sum = u1 + u2;
+                Console.Write(" =" + sum);
+            break;
+        case "-":
+                sum = u1 - u2;
+                Console.Write(" =" + sum);
+            break;
+        case "*":
+                sum = u1 * u2;
+                Console.Write(" =" + sum);
+            break;
+        case "/":
+                sum = u1 / u2;
+                Console.Write(" =" + sum);
+            break;
+}
 
 
 
